@@ -19,3 +19,5 @@ Simple cross-platform voice agent powered by OpenAI.
 3. The agent starts listening.
 
 Both scripts create a virtual environment, install dependencies, copy `.env.example` to `.env`, and run `main.py`.
+
+If PortAudio or other audio dependencies are unavailable, the agent automatically falls back to text input mode so it can still run in environments without microphone access.
