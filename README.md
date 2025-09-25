@@ -1,6 +1,6 @@
 # Voice Agent
 
-Simple cross-platform voice agent powered by OpenAI.
+Simple cross-platform voice agent powered by OpenAI. Record a short clip, stream the model's reply back in the terminal, and optionally speak it aloud.
 
 ## Setup & Run
 
@@ -19,3 +19,19 @@ Simple cross-platform voice agent powered by OpenAI.
 3. The agent starts listening.
 
 Both scripts create a virtual environment, install dependencies, copy `.env.example` to `.env`, and run `main.py`.
+
+## Usage
+
+* The agent now keeps the full conversation history so you can ask follow-up questions.
+* Press `Ctrl+C` or say "exit" ("quit"/"bye" also work) to stop listening.
+* Set `TEXT_ONLY=1` in `.env` if you prefer to type instead of using the microphone.
+
+## Configuration
+
+Update `.env` with the following options:
+
+- `OPENAI_API_KEY` – required OpenAI API key.
+- `OPENAI_MODEL` – chat model to use (defaults to `gpt-4o`).
+- `TEXT_ONLY` – set to `1` for keyboard-only mode.
+- `SYSTEM_PROMPT` – optional instruction that is prepended to the conversation.
+- `RECORD_SECONDS` – duration of each microphone capture in seconds (defaults to `8`).
